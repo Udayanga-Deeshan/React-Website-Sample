@@ -29,3 +29,13 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+
+     -name: Build & push Docker image
+     - uses: mr-smithers-excellent/docker-build-push@v6
+      with:
+        image: masterdeeshan/react-image
+        tags: v1, latest
+        registry: docker.io
+       dockerfile: Dockerfile.ci
+       username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
