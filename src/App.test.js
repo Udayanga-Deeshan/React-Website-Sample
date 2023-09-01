@@ -10,10 +10,10 @@ test('renders learn react link', () => {
   if (linkElement) {
     expect(linkElement).toBeInTheDocument();
   } else {
-    // You can add a custom message or handle the case when the element is not found
+    
     // For example:
     console.warn('The "learn react" link was not found in the rendered component.');
     // Or you can fail the test explicitly
-    // fail('The "learn react" link was not found in the rendered component.');
+    
   }
 });
